@@ -9,8 +9,9 @@ if __name__ == "__main__":
     results = []
     top_windows = []
     win32gui.EnumWindows(windowEnumerationHandler, top_windows)
+    print(win32gui.EnumWindows(windowEnumerationHandler, top_windows))
     for i in top_windows:
-        if "notepad" in i[1].lower():
+        if "Arc-En-Ciel" in i[1].lower():
             print i
             win32gui.ShowWindow(i[0], 5)
             win32gui.SetForegroundWindow(i[0])
