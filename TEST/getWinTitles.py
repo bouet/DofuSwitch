@@ -21,4 +21,3 @@ def foreach_window(hwnd, lParam):
 EnumWindows(EnumWindowsProc(foreach_window), 0)
 
 print(titles)
-

@@ -1,5 +1,10 @@
 import wmi
 c = wmi.WMI ()
+procDofus = []
 
 for process in c.Win32_Process ():
-  print process.ProcessId, process.Name
+  if process.Name == 'Dofus.exe':
+    procDofus.append(process.ProcessId)
+    procDofus.append(process.Name)
+
+print procDofus
